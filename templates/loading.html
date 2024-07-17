@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/loading.css') }}">
+</head>
+<body>
+    <div class="loader"></div>
+    <p>Generating...</p>
+</body>
+{% if n %}
+<script> window.location.replace("{{ url_for('generate_audio', num_kids=n ) }}"); </script>
+{% else %}
+<script> window.location.replace("{{ url_for('generate_audio', num_kids=0 ) }}"); </script>
+{% endif %}
+</html>

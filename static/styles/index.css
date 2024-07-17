@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(20, 5, 43);
+    color: white;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.form {
+    font-size: 18px;
+}
+
+.hat {
+    width: 300px;
+}
+
+.btn {
+    background-color: #cda90b; 
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0px 2px 4px #413503;
+}
+
+.btn:hover {
+    background-color: #907706;
+}
+
+.btn:active {
+    background-color: #907706;
+    box-shadow: none;
+    top: 2px;
+    left: 1px;
+}

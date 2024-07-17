@@ -1,0 +1,20 @@
+<!doctype html>
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/download.css') }}">
+    <link rel="icon" href="https://png.pngtree.com/png-vector/20230831/ourmid/pngtree-wizard-hat-color-png-image_9967216.png" type="image/x-icon"/>
+</head>
+<body>
+    {% if path %}
+    <br />
+    <a href="{{ url_for('download', filename=path ) }}">
+        <button class="btn">
+            Download sorting.mp3
+        </button>
+    </a>
+    {% endif %}
+    
+    <br />
+    <form action="{{ url_for('run')}}">
+        <button type="submit">Back</button>
+    </form>
+</body>
