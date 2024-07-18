@@ -8,12 +8,12 @@ app.config["DOWNLOAD_FOLDER"] = os.path.dirname(os.path.abspath(__file__))
 
 @app.route('/')
 def run():
-    return render_template("index.html", path=None)
+    return render_template("index.html", n=None)
 
 @app.route('/', methods =["POST"])
 def loading():
     num_kids = request.form.get("nkids")
-    return render_template("loading.html", n=num_kids)
+    return render_template("index.html", n=num_kids)
 
 @app.route('/generate_audio/<num_kids>')
 def generate_audio(num_kids):

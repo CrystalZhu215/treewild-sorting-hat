@@ -17,8 +17,12 @@
         </form>
     </div>
 
-    {% if path %}
-    <br />
-    <a href="{{ url_for('download', filename=path ) }}">Download sorting.mp3</a>
+    {% if n %}
+    <div class="loader"></div>
+    <p>Generating...</p>
     {% endif %}
+
 </body>
+{% if n %}
+<script> window.location.replace("{{ url_for('generate_audio', num_kids=n ) }}"); </script>
+{% endif %}
